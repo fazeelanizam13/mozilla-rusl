@@ -1,0 +1,841 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    scroll-behavior: smooth
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #2f343b;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Assistant-Regular';
+  src: url("../font/Assistant-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Assistant-SemiBold';
+  src: url("../font/Assistant-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Assistant-Bold';
+  src: url("../font/Assistant-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.come-up {
+  transform: translateY(150px);
+  animation: come-up 1s ease forwards; 
+}
+
+@keyframes come-up {
+  to {
+    transform: translateY(0); 
+    } 
+}
+
+.slide-from-right {
+  transform: translateX(500px);
+  animation: slide-from-right 1.5s ease forwards; 
+}
+
+@keyframes slide-from-right {
+  to {
+    transform: translateX(0); 
+    } 
+}
+
+.slide-from-left {
+  transform: translateX(-500px);
+  animation: slide-from-left 1.5s ease forwards; 
+}
+
+@keyframes slide-from-left {
+  to {
+    transform: translateX(0); 
+    } 
+}
+
+.menu a,
+#events .content a,
+p.welcome-message span,
+.event-list a, 
+.team-img{
+    transform: translateY(0);
+    transition: all .2s ease-in
+}
+    
+.menu a:hover, 
+#events .content a:hover, 
+p.welcome-message span:hover, 
+.event-list a:hover, 
+#team .content a:hover .team-img{
+    transform: translateY(-5px)
+}
+
+a.webvr.open, 
+a.outreach.open, 
+a.event1.open, 
+a.event2.open, 
+.bold{
+    font-family: Assistant-Bold
+}
+
+/*-----------------------------------------------------------------*/
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-size: 1em;
+    font-family: Assistant-Regular;
+    color: #2f343b;
+    line-height: 1.6em
+}
+
+.box {
+    margin: 0;
+    padding: 0;
+    z-index: 0; 
+}
+
+a{
+    text-decoration: none;
+    color: inherit
+}
+
+.above-fold{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/above-fold-pic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Assistant-SemiBold
+}
+
+p.welcome-message{
+    background-color: rgb(249, 249, 249, .3);
+    padding: 10% 20%;
+    width: auto;
+    font-size: 2.2em;
+    line-height: 1.7em
+}
+
+p.welcome-message span{
+    display: block;
+    font-family: Assistant-Regular;
+    background-color: rgb(33, 56, 91);
+    color: #fff;
+    margin: 25px auto;
+    width: 150px;
+    font-size: .7em;
+}
+
+.below-fold{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+}
+
+.navigation{
+    z-index: 1;
+    font-family: Assistant-SemiBold
+}
+    
+.main{
+    margin-top: 100px;
+    padding: 20px
+}
+
+h1{
+    text-align: center;
+    padding-bottom: 35px;
+    border-bottom: 3px #61c6ab  solid
+}
+
+#events .content, #team .content{
+    display: flow-root
+}
+
+.footer{
+    background-color: #21385b;
+    text-align: center;
+    color: #fff
+}
+
+.event{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 10px
+}
+
+#events .event, .event-list a, #team .event{
+    border: 1px #ccc solid;
+}
+
+.ev-img img{
+    width: 350px
+}
+
+.ev-details span{
+    margin-left: 15px;
+    margin-top: 10px;
+    display: block
+}
+
+.ev-title{
+    font-family: Assistant-Bold;
+    font-size: 1.1em
+}
+
+.ev-ven{
+    font-size: .9em
+}
+
+.ev-reg{
+    margin-left: 20px;
+}
+
+.ev-reg p{
+    background-color: #61c6ab;
+    padding: 10px 20px;
+    font-family: Assistant-SemiBold
+}
+
+#outreach, #event1, #event2{
+    display: none
+}
+
+#gallery .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start
+}
+
+.event-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 30%;
+}
+
+.event-list a{
+    text-align: right;
+    font-size: 1.1em;
+    padding: 15px;
+    margin: 10px 30px;
+    width: 100%;
+}
+
+.event-photos{
+    width: 60%
+}
+
+.team-img img{
+    height: 200px
+}
+
+.heading p{
+    text-align: center;
+    margin-top: 35px
+}
+
+#contact .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.brand-img img{
+    width: 150px
+}
+
+.contact img{
+    width: 40px;
+    margin: 10px
+}
+
+.social img{
+    transform: scale(1);
+    transition: all .1s ease-in
+}
+
+.social img:hover{
+    transform: scale(1.2)
+}
+
+.brand{
+    width: 40%
+}
+
+.contact{
+    width: 40%
+}
+
+.add, .phone, .mail{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center
+}
+
+@media only screen and (min-width: 768px){
+    .menu-button,
+    .logo{
+        display: none
+    }
+    
+    .logo img{
+        width: 100px;
+        margin: 10px
+    }
+    
+    .navigation{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100px;
+    }
+    
+    #menu-overlay{
+        position: fixed;
+        right: 0;
+        width: 100%;
+        transition: all .5s ease-in
+    }
+    
+    .menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        float: right;
+        width: 75%
+    }
+    
+    .menu a{
+        margin: 10px 5px;
+        padding: 10px 20px;
+        width: 85px;
+        text-align: center;
+    }
+    
+    .section{
+        padding: 15px;
+        padding-top: 50px
+    }
+
+    .content, .heading{
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    html{
+        font-size: .9em
+    }
+    
+    h1{
+        font-size: 1.6em
+    }
+    
+    .footer{
+        font-size: .9em
+    }
+    
+    .logo{
+        display: none
+    }
+    
+    p.welcome-message{
+        font-size: 1.5em;
+        line-height: 1.5em
+    }
+    
+    .carousel {
+        width: 90%;
+    }
+    
+    .menu-button{
+        visibility: visible;
+        background-color: rgb(33, 56, 91, .7);
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+    }
+    
+    .menu-button:hover{
+        background-color: #61c6ab;
+    }
+
+    .menu-button:hover .line{
+        background-color: #21385b;
+    }
+    
+    .lines{
+        width: 26px;
+        height: 20px;
+        position: absolute;
+        top: 10px;
+        left: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 3
+    }
+
+    .line{
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        transition-duration: .2s;
+        transition-property: all;
+        transition-timing-function: ease-in
+    }
+    
+    .line-2.open{
+        display: none;
+    }
+
+    .line-1.open{
+        transform: translateY(10px) translateY(-50%) rotate(45deg);
+        transform-origin: center
+    }
+
+    .line-3.open{
+        transform: translateY(-10px) translateY(50%) rotate(-45deg);
+        transform-origin: center
+    }
+    
+    #menu-overlay{
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 75%;
+        color: #fff;
+        background-color: rgb(33, 56, 91, .7);
+    }
+    
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 90%;
+        width: 50%;
+        position: relative;
+        top: 5%;
+        left: 25%
+    }
+    
+    .menu a{
+        padding: 5% 2%;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .section{
+        padding: 5px;
+        padding-top: 50px
+    }
+
+    .content, .heading, .footer{
+        padding: 5px;
+    }
+    
+    .event{
+        padding: 5px;
+        margin: 10px;
+        width: 95%
+    }
+
+    .ev-img img{
+        width: 100%
+    }
+
+    .ev-details span{
+        margin-left: 10px;
+    }
+    
+    #team .content .event{
+        align-items: center;
+        text-align: center
+    }
+
+    .team-img img{
+        height: 200px;
+    }
+
+    .ev-reg{
+        margin-left: 40px;
+    }
+    
+    #gallery .content{
+        flex-direction: column;
+        align-items: center
+    }
+
+    .event-photos{
+        width: 90%
+    }
+
+    .event-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+    }
+
+    .event-list a{
+        text-align: center;
+        font-size: 1em;
+        padding: 10px;
+        margin: 7px;
+    }
+
+    #contact .content{
+        flex-direction: column;
+    }
+
+    .brand-img img{
+        width: 100px;
+        margin: 15px
+    }
+    
+    .brand-text{
+        padding-top: 0;
+        margin-top: 0
+    }
+
+    .contact img{
+        width: 35px;
+        margin: 10px
+    }
+
+    .social img{
+        transform: scale(1);
+        transition: all .1s ease-in
+    }
+
+    .social img:hover{
+        transform: scale(1.2)
+    }
+
+    .brand{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .contact{
+        width: 95%;
+        padding: 15px
+    }
+
+    .add, .phone, .mail{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center
+    }
+} /*just mobile navigation*/
+    
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #2f343b !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

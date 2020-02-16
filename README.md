@@ -3,7 +3,7 @@
 This website was developed as an entry for the hackathon conducted by Mozilla Campus Club of Rajarata University of Sri Lanka to select one that would subsequently be given the opportunity to represent the club.
 
 <p align="center">
-<img src="ss.png" width="90%" align="center">
+<img src="ss.gif" width="90%" align="center">
 </p>
 
 ## On the Design Choices:

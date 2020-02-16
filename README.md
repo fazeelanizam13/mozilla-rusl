@@ -1,4 +1,4 @@
-# [Offcial Homepage: Mozilla Campus Club - RUSL]()
+# [Offcial Homepage: Mozilla Campus Club - RUSL](https://fazeelanizam13.github.io/mozilla-rusl/)
 
 This website was developed as an entry for the hackathon conducted by Mozilla Campus Club of Rajarata University of Sri Lanka to select one that would subsequently be given the opportunity to represent the club.
 

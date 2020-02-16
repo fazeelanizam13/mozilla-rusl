@@ -1,0 +1,7 @@
+- Meta url and og:url 'content' attribute values has to be reaplaced with the site URL
+
+- 'Membership' link on the navigation menu and 'Join Us' call to action button has to take user to a tool which they can use to become part of the club, for an example, a Google Form.
+
+- Each team member card has to link to their social profile, prefetably LinkedIn. 
+
+- In the 'Contact' section, club email, contact number and social links has to be replaced with real ones.
